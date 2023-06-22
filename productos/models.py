@@ -6,14 +6,14 @@ class Marca(models.Model):
     id_marca  = models.AutoField(db_column='idMarca', primary_key=True) 
     marca     = models.CharField(max_length=20, blank=False, null=False)
 
-    def _str_(self):
+    def __str__(self):
         return str(self.marca)
 
 class Talla(models.Model):
     id_talla  = models.AutoField(db_column='idTalla', primary_key=True) 
     talla     = models.CharField(max_length=20, blank=False, null=False)
 
-    def _str_(self):
+    def __str__(self):
         return str(self.talla)
 
 
@@ -26,5 +26,5 @@ class Producto(models.Model):
     precio           = models.IntegerField()
     imagen           = models.ImageField(upload_to="productos", null=True)
 
-    def _str_(self):
+    def __str__(self):
         return str(self.nombre_prod)+" "+str(self.color)+" "+str(self.precio)
