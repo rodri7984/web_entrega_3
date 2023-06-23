@@ -44,13 +44,16 @@
                     {% if auxPro.imagen %}
                     <td><img src="{{auxPro.imagen.url}}" alt="no disponible" style="height: 50px;"></td>
                     {% endif %}
-                    <!-- <td><button type="button"><a href="{% url 'productosEdit' pk=auxPro.id_prod %}">Modificar</a></button></td>
-                    <td><button type="button"><a href="{% url 'productosDel' pk=auxPro.id_prod %}">Eliminar</a></button></td> -->
+                    <td><button type="button"><a href="{% url 'productosEdit' pk=auxPro.id_prod %}">Modificar</a></button></td>
+                    <td><button type="button"><a href="{% url 'productosDel' pk=auxPro.id_prod %}">Eliminar</a></button></td>
                 </tr>
                 {% endfor %}
             </table>
         </div>
         <br>
+        <div class="row">
+            <a href="{% url 'productosAdd' %}">Ingresar nuevo producto</a>
+        </div>
        
     </div>
 </body>
